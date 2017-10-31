@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -45,9 +45,9 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button_clearInput = new System.Windows.Forms.Button();
+            this.textBox_input = new System.Windows.Forms.TextBox();
+            this.textBox_output = new System.Windows.Forms.TextBox();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -239,34 +239,34 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
-            // button18
+            // button_clearInput
             // 
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(292, 84);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(60, 60);
-            this.button18.TabIndex = 0;
-            this.button18.Text = "C";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button_clearInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_clearInput.Location = new System.Drawing.Point(292, 84);
+            this.button_clearInput.Name = "button_clearInput";
+            this.button_clearInput.Size = new System.Drawing.Size(60, 60);
+            this.button_clearInput.TabIndex = 0;
+            this.button_clearInput.Text = "C";
+            this.button_clearInput.UseVisualStyleBackColor = true;
+            this.button_clearInput.Click += new System.EventHandler(this.button_clearInput_Click);
             // 
-            // textBox1
+            // textBox_input
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(329, 30);
-            this.textBox1.TabIndex = 1;
+            this.textBox_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_input.Location = new System.Drawing.Point(23, 12);
+            this.textBox_input.Name = "textBox_input";
+            this.textBox_input.ReadOnly = true;
+            this.textBox_input.Size = new System.Drawing.Size(329, 30);
+            this.textBox_input.TabIndex = 1;
             // 
-            // textBox2
+            // textBox_output
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(23, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(329, 30);
-            this.textBox2.TabIndex = 1;
+            this.textBox_output.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_output.Location = new System.Drawing.Point(23, 48);
+            this.textBox_output.Name = "textBox_output";
+            this.textBox_output.ReadOnly = true;
+            this.textBox_output.Size = new System.Drawing.Size(329, 30);
+            this.textBox_output.TabIndex = 1;
             // 
             // button19
             // 
@@ -290,13 +290,13 @@
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
-            // Form1
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 417);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_output);
+            this.Controls.Add(this.textBox_input);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -305,7 +305,7 @@
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button_clearInput);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -317,8 +317,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Calculator";
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,9 +343,9 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button_clearInput;
+        private System.Windows.Forms.TextBox textBox_input;
+        private System.Windows.Forms.TextBox textBox_output;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
     }
