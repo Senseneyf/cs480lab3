@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace cs480lab3
 {
     public partial class Calculator : Form
     {
@@ -116,13 +116,26 @@ namespace WindowsFormsApp1
         //enter button
         private void button17_Click(object sender, EventArgs e)
         {
-
+            Rpn rpn = new Rpn();
+            try
+            {
+                rpn.ToPostfix(textBox_input.Text);
+                //double result = rpn.Evaluate();
+                textBox_input.Text = "";
+                //textBox_output.Text = result.ToString();
+            }
+            catch(Exception ex)
+            {
+                textBox_input.Text = "";
+                textBox_output.Text = ex.Message;
+            }
         }
 
         //clear input button
         private void button_clearInput_Click(object sender, EventArgs e)
         {
             textBox_input.Text = "";
+            textBox_output.Text = "";
         }
 
         //right parentheses button
