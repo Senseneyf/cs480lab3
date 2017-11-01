@@ -116,16 +116,20 @@ namespace cs480lab3
         //enter button
         private void button17_Click(object sender, EventArgs e)
         {
+            //create an instance of the rpn object
             Rpn rpn = new Rpn();
             try
             {
-                rpn.ToPostfix(textBox_input.Text);
-                //double result = rpn.Evaluate();
+                //attempt to evaluate the expression
+                double result = rpn.Evaluate(textBox_input.Text);
+                textBox_output.Text = result.ToString();
                 textBox_input.Text = "";
-                //textBox_output.Text = result.ToString();
+
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                //print any errors to the output box
                 textBox_input.Text = "";
                 textBox_output.Text = ex.Message;
             }
